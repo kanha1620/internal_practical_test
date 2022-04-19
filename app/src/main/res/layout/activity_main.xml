@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edtFrName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+        android:inputType="textPersonName"
+        android:hint="Enter Fruit Name" />
+
+    <EditText
+        android:id="@+id/edtFrDes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+        android:inputType="textPersonName"
+        android:hint="Enter Description" />
+
+    <EditText
+        android:id="@+id/edtFrPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+        android:inputType="textPersonName"
+        android:hint="Enter Price" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="133dp"
+            android:layout_height="51dp"
+            android:text="Insert"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.172"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="39dp"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btnView"
+            android:layout_width="147dp"
+            android:layout_height="51dp"
+            android:layout_marginEnd="44dp"
+            android:text="View All"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="39dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/myrecycle"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="409dp"
+            android:layout_height="374dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAdd" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
